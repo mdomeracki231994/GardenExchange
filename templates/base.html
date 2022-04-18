@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Garden Exchange</title>
+    {% load bootstrap5 %}
+    {# Load CSS and JavaScript #}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/site.css' %}">
+</head>
+<body>
+    <ul class="nav bg-success">
+        <li class="nav-item">
+            <a class="nav-link text-dark" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" href="#">About</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" href="#">Compost</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-dark" href="#">Blog</a>
+        </li>
+    </ul>
+    {% block content %}
+    {% endblock content %}
+</body>
+</html>
